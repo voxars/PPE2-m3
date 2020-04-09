@@ -1,6 +1,6 @@
 <?php
 /**
- * The Mail_Mime class is used to create MIME E-mail messages
+ * The Mail_Mime class is used to create MIME E-mail messages : LE GROS CHIBRAX DE CAMILLE M'IMPRESSIONE
  *
  * The Mail_Mime class provides an OO interface to create MIME
  * enabled email messages. This way you can create emails that
