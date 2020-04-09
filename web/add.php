@@ -9,6 +9,7 @@ $name = get_form_var('name', 'string');
 $description = get_form_var('description', 'string');
 $capacity = get_form_var('capacity', 'int');
 $type = get_form_var('type', 'string');
+$price = get_form_var('price','string');
 
 // Check the user is authorised for this page
 checkAuthorised();
