@@ -1,6 +1,6 @@
 <?php
 /**
- *  PEAR's Mail:: interface.
+ *  PEAR's Mail:: interface. OUI
  *
  * PHP versions 4 and 5
  *
