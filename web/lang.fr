@@ -313,6 +313,7 @@ $vocab["noarea"]             = "Sélectionnez d'abord un domaine";
 $vocab["browserlang"]        = "Votre navigateur est configuré pour utiliser la langue";
 $vocab["addroom"]            = "Ajouter une salle";
 $vocab["capacity"]           = "Maximum de personnes";
+$vocab["price"]              = "Prix";
 $vocab["norooms"]            = "Aucune salle n'est créée pour ce domaine.";
 $vocab["administration"]     = "Administration";
 $vocab["invalid_area_name"]  = "Ce nom de domaine a déjà été utilisé!";

@@ -437,8 +437,8 @@ if ($is_admin || ($n_displayable_areas > 0))
         </div>
 
         <div>
-          <label for="room_capacity"><?php echo get_vocab("capacity") ?>:</label>
-          <input type="text" id="room_capacity" name="capacity">
+          <label for="room_price"><?php echo get_vocab("price") ?>:</label>
+          <input type="text" id="room_price" name="price">
         </div>
        
         <div>
