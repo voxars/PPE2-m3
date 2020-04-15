@@ -1215,6 +1215,9 @@ else
       get_vocab("save") . "\">\n";
     echo "</div>\n";
     ?>
+
+    
+    <input type="button" value="ton texte de lien" onclick="document.location.href='\Facture\facture.php';">
   </fieldset>
 </form>
 
