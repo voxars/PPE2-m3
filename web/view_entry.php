@@ -441,10 +441,14 @@ echo create_details_body($row, TRUE, $keep_private, $room_disabled);
     if (!empty($repeat_id) || $series)
     {
       echo "<a href=\"view_entry.php?action=export&amp;id=$repeat_id&amp;series=1&amp;day=$day&amp;month=$month&amp;year=$year&amp;returl=$link_returl\">".get_vocab("exportseries")."</a>";
+      
     }
     echo "</div>\n";
   }
   ?>
+  <form action="Facture/facture.php" method="POST" TARGET="_BLANK">
+      <input type="submit" name="bouton" value="CLIQUEZ">
+    </form>
   <div id="returl">
     <?php
     if (isset($HTTP_REFERER)) //remove the link if displayed from an email

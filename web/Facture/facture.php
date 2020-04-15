@@ -41,7 +41,7 @@
             <td class="desc">Creating a recognizable design solution based on the company's existing visual identity</td>
             <td class="unit">$40.00</td>
             <td class="qty">26</td>
-            <td class="total"><?php $price ?></td>
+            <td class="total"><?php $room_price ?></td>
           </tr>
           
         </tbody>
