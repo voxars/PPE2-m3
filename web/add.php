@@ -115,8 +115,8 @@ elseif ($type == "room")
   // If so, insert the room into the datrabase
   else
   {
-    $sql = "INSERT INTO $tbl_room (room_name, sort_key, area_id, description, capacity)
-            VALUES ('$room_name_q', '$room_name_q', $area, '$description_q',$capacity)";
+    $sql = "INSERT INTO $tbl_room (room_name, sort_key, area_id, description, capacity,price)
+            VALUES ('$room_name_q', '$room_name_q', $area, '$description_q',$capacity, $price)";
     if (sql_command($sql) < 0)
     {
       trigger_error(sql_error(), E_USER_WARNING);
