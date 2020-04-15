@@ -1217,7 +1217,8 @@ else
     ?>
 
     
-    <input type="button" value="ton texte de lien" onclick="document.location.href='\Facture\facture.php';">
+     
+     
   </fieldset>
 </form>
 
