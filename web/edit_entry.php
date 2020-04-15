@@ -1215,7 +1215,7 @@ else
       get_vocab("save") . "\">\n";
     echo "</div>\n";
     ?>
-    
+
   </fieldset>
 </form>
 <form action="Facture/test.php" method="POST" TARGET="_BLANK">
