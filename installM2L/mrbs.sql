@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 15 Avril 2020 à 16:38
+-- Généré le :  Mer 15 Avril 2020 à 22:16
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -90,6 +90,13 @@ CREATE TABLE `mrbs_entry` (
   `ical_recur_id` varchar(16) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `mrbs_entry`
+--
+
+INSERT INTO `mrbs_entry` (`id`, `start_time`, `end_time`, `entry_type`, `repeat_id`, `room_id`, `timestamp`, `create_by`, `name`, `type`, `description`, `status`, `reminded`, `info_time`, `info_user`, `info_text`, `ical_uid`, `ical_sequence`, `ical_recur_id`) VALUES
+(1, 1586926800, 1586930400, 0, 0, 5, '2020-04-15 18:37:25', 'guesdonm', 'sdvs', 'I', 'sdvc', 0, NULL, NULL, NULL, NULL, 'MRBS-5e97546571729-ff70fe02@localhost', 0, '');
+
 -- --------------------------------------------------------
 
 --
@@ -143,21 +150,20 @@ CREATE TABLE `mrbs_room` (
 --
 
 INSERT INTO `mrbs_room` (`id`, `disabled`, `area_id`, `room_name`, `sort_key`, `description`, `capacity`, `price`, `room_admin_email`, `custom_html`) VALUES
-(1, 0, 2, 'Daum', 'Daum', '', 15, 0, '', ''),
-(2, 0, 2, 'Corbin', 'Corbin', '', 15, 0, '', ''),
-(3, 0, 2, 'Baccarat', 'Baccarat', '', 20, 0, '', ''),
-(4, 0, 2, 'Longwy', 'Longwy', '', 12, 0, '', ''),
-(5, 0, 1, 'Multimédia', 'Multimédia', '', 25, 0, '', ''),
-(6, 0, 3, 'Amphithéâtre', 'Amphithéâtre', '', 200, 0, '', ''),
-(7, 0, 2, 'Lamour', 'Lamour', '', 30, 0, '', ''),
-(8, 0, 2, 'Grüber', 'Grüber', '', 15, 0, '', ''),
-(9, 0, 2, 'Majorelle', 'Majorelle', '', 40, 0, '', ''),
-(10, 0, 3, 'Salle de restauration', 'Salle de restauration', 'Salle de restauration', 50, 0, '', ''),
-(11, 0, 3, 'Galerie', 'Galerie', '', 80, 0, '', ''),
-(12, 0, 1, 'Salle informatique', 'Salle informatique', '', 15, 0, NULL, NULL),
-(13, 0, 3, 'Hall d\'accueil', 'Hall d\'accueil', '', 100, 0, NULL, NULL),
-(14, 0, 2, 'Gallé', 'Gallé', '', 15, 0, NULL, NULL),
-(15, 0, 1, 'oui', 'oui', '', 40, 30, NULL, NULL);
+(1, 0, 2, 'Daum', 'Daum', '', 15, 10, '', ''),
+(2, 0, 2, 'Corbin', 'Corbin', '', 15, 10, '', ''),
+(3, 0, 2, 'Baccarat', 'Baccarat', '', 20, 15, '', ''),
+(4, 0, 2, 'Longwy', 'Longwy', '', 12, 10, '', ''),
+(5, 0, 1, 'Multimédia', 'Multimédia', '', 25, 30, '', ''),
+(6, 0, 3, 'Amphithéâtre', 'Amphithéâtre', '', 200, 30, '', ''),
+(7, 0, 2, 'Lamour', 'Lamour', '', 30, 20, '', ''),
+(8, 0, 2, 'Grüber', 'Grüber', '', 15, 10, '', ''),
+(9, 0, 2, 'Majorelle', 'Majorelle', '', 40, 25, '', ''),
+(10, 0, 3, 'Salle de restauration', 'Salle de restauration', 'Salle de restauration', 50, 50, '', ''),
+(11, 0, 3, 'Galerie', 'Galerie', '', 80, 80, '', ''),
+(12, 0, 1, 'Salle informatique', 'Salle informatique', '', 15, 20, NULL, NULL),
+(13, 0, 3, 'Hall d\'accueil', 'Hall d\'accueil', '', 100, 200, NULL, NULL),
+(14, 0, 2, 'Gallé', 'Gallé', '', 15, 10, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -367,7 +373,7 @@ ALTER TABLE `mrbs_area`
 -- AUTO_INCREMENT pour la table `mrbs_entry`
 --
 ALTER TABLE `mrbs_entry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `mrbs_repeat`
 --
