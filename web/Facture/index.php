@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-include 
   <head>
     <meta charset="utf-8">
     <title>Example 1</title>
