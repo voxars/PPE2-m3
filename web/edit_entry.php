@@ -1217,8 +1217,5 @@ else
     ?>
 
   </fieldset>
-</form>
-<form action="Facture/test.php" method="POST" TARGET="_BLANK">
-      <input type="submit" name="bouton" value="CLIQUEZ">
-    </form>
+
 <?php require_once "trailer.inc" ?>
