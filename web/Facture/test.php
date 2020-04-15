@@ -10,7 +10,7 @@
     require('fpdf.php');
     
     // le mettre au debut car plante si on declare $mysqli avant !
-    $pdf = new FPDF( 'P', 'mm', 'A4' );
+    $pdf = new tFPDF( 'P', 'mm', 'A4' );
 
     // on declare $mysqli apres !
     $mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
