@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+include 
   <head>
     <meta charset="utf-8">
     <title>Example 1</title>
@@ -41,7 +42,7 @@
             <td class="desc">Creating a recognizable design solution based on the company's existing visual identity</td>
             <td class="unit">$40.00</td>
             <td class="qty">26</td>
-            <td class="total">$1,040.00</td>
+            <td class="total"><?php $price ?></td>
           </tr>
           
         </tbody>
