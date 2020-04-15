@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-/*  <head>
+  <head>
     <meta charset="utf-8">
-    <title>Example 1</title>
+    <title>Facture</title>
     <link rel="stylesheet" href="style.css" media="all" />
   </head>
   <body>
@@ -51,4 +51,4 @@
       
     </footer>
   </body>
-</html> */
+</html> 
