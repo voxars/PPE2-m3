@@ -450,7 +450,8 @@ echo create_details_body($row, TRUE, $keep_private, $room_disabled);
       <input type="submit" name="bouton" value="CLIQUEZ">
     </form>
   <div id="returl">
-  <form action="Facture/test.php" method="POST" TARGET="_BLANK">
+  <form action="Facture/test.php" method="POST" >
+      <input type="hidden" name="resa" id="resa" value="<?= $id ?>">
       <input type="submit" name="bouton" value="CLIQUEZ">
     </form>
   <div id="returl">
