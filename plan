@@ -10,4 +10,8 @@ je ne sais pas si il faut modifier pour chaque pages differentes ou si il y a un
 pour cloturer une facture l'option est deja disponible mais on peut mettre le meme if que avec les conditions d'authentification mais uniquement disponnible pour l'admin 
 pour la relance de facture aucune idee de comment faire mais un boutton envoyant un mail a l'utilisateur en question serait une bonne idée
 
-1h22 trop fatiguer pour continuer a chercher j'y arrive pas ... 
+if (auth_book_admin($user)) peut etre quelque chose comme chaque
+le if sert a eviter aux utilisateur autres que celui qui a reserver de modifier ou supprimer une reservation
+
+il faudrait un $level avec le niveau d'acces de l'utilisateur afin de rendre visible ou non les liens de la banniere
+liens dans la banniere introuvable je ne sais pas ou ils sont dans tout les fichiers
