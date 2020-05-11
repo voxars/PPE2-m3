@@ -1,0 +1,13 @@
+authentification: 
+l'acces au pages de vus depent du niveau d'autorisation du compte
+admin acces a tout
+user niveau 0 acces aux demanes de reservations, salles disponnible, a l'aide
+user niveau 1 acces a ses propres reservation et au rapport en plus de tout les acces du niveau 0
+
+faire un if avec le niveau d'autorisation de l'utilisateur connecter en faisant varier les affichage des liens des pages accessibles en fonction du niveau d'acces
+je ne sais pas si il faut modifier pour chaque pages differentes ou si il y a une page qui regroupe l'enssemble des accés.
+
+pour cloturer une facture l'option est deja disponible mais on peut mettre le meme if que avec les conditions d'authentification mais uniquement disponnible pour l'admin 
+pour la relance de facture aucune idee de comment faire mais un boutton envoyant un mail a l'utilisateur en question serait une bonne idée
+
+1h22 trop fatiguer pour continuer a chercher j'y arrive pas ... 
