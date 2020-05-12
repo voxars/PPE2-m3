@@ -1,7 +1,7 @@
 <?php 
    include("top.php");
    session_start();
-   @$login=$_POST["login"];
+   $_SESSION['login']=@$login=$_POST["login"];
    @$pass=md5($_POST["pass"]);
    @$valider=$_POST["valider"];
    $erreur="";
@@ -25,6 +25,7 @@
    <div class="form-group px-md-5">
       <label for="exampleInputEmail1">Pseudo</label>
       <input type="text" class="form-control" name="login" id="pseudo" >
+      
    </div>
    <div class="form-group px-md-5">
       <label for="exampleInputPassword1">Password</label>
