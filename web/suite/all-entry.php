@@ -39,6 +39,7 @@ if($level <= 1)
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
             echo "<TH>". $donnees['timestamp'] ."</TH>";
+            echo "<TH>" ?><input type="submit" name="bouton" class="btn btn-primary" value="Afficher facture"> <?php "/TH>";
             echo "</TR>";
         }
         
@@ -72,6 +73,7 @@ else
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
             echo "<TH>". $donnees['timestamp'] ."</TH>";
+            echo "<TH>" ?><input type="submit" name="bouton" class="btn btn-primary" value="Afficher facture"> <?php "/TH>";
             echo "</TR>";
         }
         
