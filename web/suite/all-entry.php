@@ -64,8 +64,7 @@ else
     <?php
         $sel=$pdo->prepare("SELECT * FROM mrbs_entry");
         $sel->execute(array($log));
-        $donnees = $sel->fetch();
-        $_SESSION['date']=$donnees['timestamp'];
+
         while ($donnees = $sel->fetch())
         {
             //On affiche l'id et le nom du client en cours
@@ -73,7 +72,7 @@ else
             echo "<TH scope='row'> ". $donnees['id'] ."</TH>";
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
-            echo "<TH>". $donnees['timestamp'] ."</TH>";
+            echo "<TH>". $_SESSION['date']=$donnees['timestamp'] ."</TH>";
             echo "<TH>" ?><input type="submit" name="bouton" class="btn btn-primary" value="Afficher facture"> <?php "/TH>";
             echo "</TR>";
         }
