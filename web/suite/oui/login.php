@@ -51,7 +51,7 @@
       </style>
    </head>
    <body onLoad="document.fo.login.focus()">
-      <h1>Authentification [ <a href="inscription.php">Créer un compte</a> ]</h1>
+      <h1>Authentification</h1>
       <div class="erreur"><?php echo $erreur ?></div>
       <form name="fo" method="post" action="">
          <input type="text" name="login" placeholder="Login" /><br />
