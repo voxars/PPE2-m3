@@ -22,15 +22,15 @@ include 'top.php';
 
 <body onLoad="document.fo.login.focus()">
    <form name="fo" method="post" action="">
-   <div class="form-group">
+   <div class="form-group px-md-5 ">
       <label for="exampleInputEmail1">Pseudo</label>
       <input type="text" class="form-control" name="login" id="pseudo" >
    </div>
-   <div class="form-group">
+   <div class="form-group px-md-5">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" class="form-control" name="pass" id="exampleInputPassword1">
    </div>
    
-   <button type="submit" name="valider" class="btn btn-primary" values="S'authentifier">Submit</button>
+   <button type="submit" name="valider" class="btn btn-primary " values="S'authentifier">Submit</button>
    </form>
 </body>
