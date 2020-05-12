@@ -40,7 +40,7 @@
 
 
 <body onLoad="document.fo.login.focus()">
-   <form name="fo" method="post" action="session.php" >
+   <form name="fo" method="post" action="" >
    <div class="form-group px-md-5">
       <label for="exampleInputEmail1">Pseudo</label>
       <input type="text" class="form-control" name="login" id="pseudo" >
@@ -50,6 +50,6 @@
       <input type="password" class="form-control" name="pass" id="exampleInputPassword1">
    </div>
    
-   <button type="submit" name="valider" class="btn btn-primary " values="S'authentifier">Submit</button>
+   <button type="submit" name="valider" class="btn btn-primary">Submit</button>
    </form>
 </body>
