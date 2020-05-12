@@ -22,7 +22,7 @@ include 'top.php';
 
 <body onLoad="document.fo.login.focus()">
    <form name="fo" method="post" action="session.php" >
-   <div class="form-group">
+   <div class="form-group px-md-5">
       <label for="exampleInputEmail1">Pseudo</label>
       <input type="text" class="form-control" name="login" id="pseudo" >
    </div>
