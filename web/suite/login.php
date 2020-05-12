@@ -1,5 +1,5 @@
 <?php 
-
+   include("top.php");
    session_start();
    @$login=$_POST["login"];
    @$pass=md5($_POST["pass"]);
