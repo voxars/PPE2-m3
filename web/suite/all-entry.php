@@ -6,6 +6,7 @@
        header("location:login.php");
        exit();
     }  
+    
 
 $log=$_SESSION['login'];
 $idu=$_SESSION['id'];
@@ -35,10 +36,10 @@ if($level <= 1)
         {
             //On affiche l'id et le nom du client en cours
             echo "</TR>";
-            echo "<TH scope='row'> ". $donnees['id'] ."</TH>";
+            echo "<TH scope='row'> ". $_SESSION['idr']=$donnees['id'] ."</TH>";
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
-            echo "<TH>". $_SESSION['date']=$donnees['timestamp'] ."</TH>";
+            echo "<TH>". $donnees['timestamp'] ."</TH>";
             echo "<TH>" ?><input type="submit" name="bouton" onclick=window.location.href='http://localhost/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <?php "/TH>";
             echo "</TR>";
         }
@@ -72,7 +73,7 @@ else
             echo "<TH scope='row'> ". $donnees['id'] ."</TH>";
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
-            echo "<TH>". $_SESSION['date']=$donnees['timestamp'] ."</TH>";
+            echo "<TH>". $donnees['timestamp'] ."</TH>";
             echo "<TH>" ?><input type="submit" name="bouton" onclick=window.location.href='http://localhost/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <?php "/TH>";
             echo "</TR>";
         }

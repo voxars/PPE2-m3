@@ -2,7 +2,11 @@
 
 require('fpdf.php');
 include ("connexion.php");
-
+session_start();
+   if($_SESSION["autoriser"]!="oui"){
+      header("location:login.php");
+      exit();
+   }   
 
 class pdf extends tFPDF
 {
@@ -38,14 +42,7 @@ class pdf extends tFPDF
         $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
     }
 }
-
-$date = $_SESSION['date'];
-$log = $_SESSION['login'];
-$req =$pdo->prepare("SELECT id FROM mrbs_entry WHERE create_by=?,timestamp=?");
-  $id = $req->execute(array($log, $date));
-
-
-
+$id=$_SESSION['idr'];
 //var_dump($id);
 $sql =$pdo->prepare("SELECT from_unixtime(start_time) as debut,from_unixtime(end_time) as  fin,timestampdiff(SECOND,from_unixtime(start_time),from_unixtime(end_time))/3600 as duree, price, create_by,room_name, email FROM mrbs_entry e INNER JOIN mrbs_room r on r.id=e.room_id INNER JOIN mrbs_users u on e.create_by=u.name where e.id =?;");
   $info = $sql->execute(array($id));
