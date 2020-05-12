@@ -37,6 +37,45 @@ class pdf extends tFPDF
         // Numéro de page
         $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
     }
+
+    function BasicTable($header, $ligne)
+{
+    // En-tête
+    foreach($header as $col)
+        $this->Cell(40,7,'Membre : '.$ligne[4],0,1,$col,1);
+        $this->Cell(40,7,$col,1);
+    $this->Ln();
+    // Données
+    foreach($data as $row)
+    {
+        foreach($row as $col)
+            $this->Cell(40,6,$col,1);
+            $this->Cell($ligne[4],0,1,$col,1);
+        $this->Ln();
+    }
+
+    // Tableau amélioré
+function ImprovedTable($header, $ligne)
+{
+    // Largeurs des colonnes
+    $w = array(40, 35, 45, 40);
+    // En-tête
+    for($i=0;$i<count($header);$i++)
+        $this->Cell($w[$i],7,$header[$i],1,0,'C');
+    $this->Ln();
+    // Données
+    foreach($data as $row)
+    {
+        $this->Cell($w[0],6,$row[0],'LR');
+        $this->Cell($w[1],6,$row[1],'LR');
+        $this->Cell($w[2],6,number_format($row[2],0,',',' '),'LR',0,'R');
+        $this->Cell($w[3],6,number_format($row[3],0,',',' '),'LR',0,'R');
+        $this->Ln();
+    }
+    // Trait de terminaison
+    $this->Cell(array_sum($w),0,'','T');
+}
+}
 }
 $id = $_POST['resa'];
 //var_dump($id);
