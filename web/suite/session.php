@@ -20,7 +20,7 @@
    <input type="submit" name="bouton" class="btn btn-primary" value="Toutes les factures">
 </form></br>
 
-<form action="Facture/test.php" method="POST" >
+<form action="test.php" method="POST" >
    <input type="hidden" name="resa" id="resa" value="<?= $id ?>">
    <input type="submit" name="bouton" class="btn btn-primary" value="Génerer la facture en pdf">
 </form></br>
