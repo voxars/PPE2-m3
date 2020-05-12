@@ -20,6 +20,13 @@ class pdf extends tFPDF
         $this->Ln(20);
     }
 
+    function body()
+    {
+        
+    }
+        
+    
+
     // Pied de page
     function Footer()
     {
@@ -47,7 +54,12 @@ $pdf->SetFont('Times','',12);
 $pdf->Cell(0,10,'Membre : '.$ligne[4],0,1);
 $pdf->Cell(0,10,'Mail : '.$ligne[6],0,1);
 $pdf->Cell(0,10,'Date : '.$ligne[0],0,1);
-$pdf->Cell(0,10,'Durée : '.$ligne[2],0,1);
+$pdf->Cell(0,10,'Duree : '.$ligne[2],0,1);
 $pdf->Cell(0,10,'Prix total : '.$ligne[2]*$ligne[3],0,1); 
 $pdf->Output();
+
+ // observations
+ $pdf->SetFont( "Arial", "BU", 10 ); $pdf->SetXY( 5, 75 ) ; $pdf->Cell($pdf->GetStringWidth("Observations"), 0, "Observations", 0, "L");
+ $pdf->SetFont( "Arial", "", 10 ); $pdf->SetXY( 5, 78 ) ; $pdf->MultiCell(190, 4, $row[5], 0, "L");
 ?>
+

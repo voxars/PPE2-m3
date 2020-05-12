@@ -467,6 +467,6 @@ else
 
   show_colour_key();
 }
-
+echo '<p><a href="suite\oui.php?">lien</a></p>';
 require_once "trailer.inc";
 ?>
