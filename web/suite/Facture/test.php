@@ -4,6 +4,8 @@ require('fpdf.php');
 require_once "../defaultincludes.inc";
 require_once "../mrbs_sql.inc";
 require_once "../functions_view.inc";
+
+
 class pdf extends tFPDF
 {
     // En-tête
@@ -38,7 +40,7 @@ class pdf extends tFPDF
         $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
     }
 }
-$id = $_POST['resa'];
+$id=$_SESSION['id'];
 //var_dump($id);
 $sql = "SELECT from_unixtime(start_time) as debut,from_unixtime(end_time) as  fin,timestampdiff(SECOND,from_unixtime(start_time),from_unixtime(end_time))/3600 as duree, price, create_by,room_name, email FROM mrbs_entry e INNER JOIN mrbs_room r on r.id=e.room_id INNER JOIN mrbs_users u on e.create_by=u.name where e.id = ".$id.";";
   $info = sql_query($sql);

@@ -447,10 +447,7 @@ echo create_details_body($row, TRUE, $keep_private, $room_disabled);
   }
   ?>
 
-  <form action="Facture/test.php" method="POST" >
-      <input type="hidden" name="resa" id="resa" value="<?= $id ?>">
-      <input type="submit" name="bouton" value="Génerer la facture en pdf">
-    </form>
+  
   <div id="returl">
     <?php
     if (isset($HTTP_REFERER)) //remove the link if displayed from an email

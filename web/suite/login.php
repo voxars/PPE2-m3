@@ -2,7 +2,8 @@
    include("top.php");
    session_start();
    $_SESSION['login']=@$login=$_POST["login"];
-   @$pass=md5($_POST["pass"]);
+   
+   $_SESSION['pass']=@$pass=md5($_POST["pass"]);
    @$valider=$_POST["valider"];
    $erreur="";
    if(isset($valider)){
@@ -10,12 +11,14 @@
       $sel=$pdo->prepare("select * from mrbs_users where name=? and password=? limit 1");
       $sel->execute(array($login,$pass));
       $tab=$sel->fetchAll();
+      
       if(count($tab)>0){
          $_SESSION["autoriser"]="oui";
          header("location:session.php");
       }
-      else
+      else{
          $erreur="Mauvais login ou mot de passe!";
+      }
    }
 ?>
 
