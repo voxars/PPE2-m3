@@ -14,14 +14,16 @@ $log=$_SESSION['login'];
     while ($donnees = $sel->fetch())
     {
         //On affiche l'id et le nom du client en cours
-        echo "</TR>";
-        echo "<TH> <br> $donnees[id] </TH>";
-        echo "<TH> <br> $donnees[timestamp] </TH>";
-        echo "<TH> <br> $donnees[name] </TH>";
-        echo "<TH> <br> $donnees[description] </TH>";
-        echo "<br></TR>";
+        echo $donnees['id'];
+        echo $donnees[timestamp];
+        echo $donnees[name];
+        echo $donnees[description];
+        
     }
 ?>
+<form action="session.php" method="POST">
+   <input type="submit" name="bouton" class="btn btn-primary" value="Retour acceuil">
+</form></br>
 <body onLoad="document.fo.login.focus()">
       [ <a href="deconnexion.php">Se déconnecter</a> ]
    </body>
