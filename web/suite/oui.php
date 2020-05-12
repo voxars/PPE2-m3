@@ -1,7 +1,7 @@
 <?php
 include 'top.php';
 
-$req = $db->querry(SELECT * FROM mrbs_users WHERE name="admin");
+$req = $db->querry('SELECT * FROM mrbs_users WHERE id=1');
 var_dump($req);
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
