@@ -15,10 +15,9 @@ $log=$_SESSION['login'];
     {
         //On affiche l'id et le nom du client en cours
         echo $donnees['id'];
-        echo $donnees[timestamp];
-        echo $donnees[name];
-        echo $donnees[description];
-        
+        echo $donnees['timestamp'];
+        echo $donnees['name'];
+        echo $donnees['description'];
     }
 ?>
 <form action="session.php" method="POST">
@@ -26,4 +25,4 @@ $log=$_SESSION['login'];
 </form></br>
 <body onLoad="document.fo.login.focus()">
       [ <a href="deconnexion.php">Se déconnecter</a> ]
-   </body>
+</body>
