@@ -467,6 +467,6 @@ else
 
   show_colour_key();
 }
-?><h3><?php echo '<p><a href="suite\oui.php?">lien vers le module de facturation</a></p>';
+?><h3><?php echo '<p><a href="suite\login.php?">lien vers le module de facturation</a></p>';
 require_once "trailer.inc";
 ?>
