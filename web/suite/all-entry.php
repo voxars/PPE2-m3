@@ -38,7 +38,7 @@ if($level <= 1)
             echo "<TH scope='row'> ". $donnees['id'] ."</TH>";
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
-            echo "<TH>". $donnees['timestamp'] ."</TH>";
+            echo "<TH>". $_SESSION['date']=$donnees['timestamp'] ."</TH>";
             echo "<TH>" ?><input type="submit" name="bouton" onclick=window.location.href='http://localhost/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <?php "/TH>";
             echo "</TR>";
         }

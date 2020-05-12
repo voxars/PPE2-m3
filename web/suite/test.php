@@ -39,9 +39,11 @@ class pdf extends tFPDF
     }
 }
 
+$date = $_SESSION['date'];
+$log = $_SESSION['login'];
+$req =$pdo->prepare("SELECT id FROM mrbs_entry WHERE create_by=?,timestamp=?");
+  $id = $req->execute(array($log, $date));
 
-$id =$pdo->prepare("SELECT id FROM mrbs_entry WHERE create_by=?,timestamp=?");
-  $info = $sql->execute(array($id, $_SESSION['date']));
 
 
 //var_dump($id);
