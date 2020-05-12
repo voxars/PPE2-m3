@@ -15,11 +15,11 @@ $log=$_SESSION['login'];
     {
         //On affiche l'id et le nom du client en cours
         echo "</TR>";
-        echo "<TH> $donnees[id] </TH>";
-        echo "<TH> $donnees[timestamp] </TH>";
-        echo "<TH> $donnees[name] </TH>";
-        echo "<TH> $donnees[description] </TH>";
-        echo "</TR>";
+        echo "<TH> <br> $donnees[id] </TH>";
+        echo "<TH> <br> $donnees[timestamp] </TH>";
+        echo "<TH> <br> $donnees[name] </TH>";
+        echo "<TH> <br> $donnees[description] </TH>";
+        echo "<br></TR>";
     }
 ?>
 <body onLoad="document.fo.login.focus()">
