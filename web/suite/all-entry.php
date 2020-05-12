@@ -64,7 +64,8 @@ else
     <?php
         $sel=$pdo->prepare("SELECT * FROM mrbs_entry");
         $sel->execute(array($log));
-        
+        $donnees = $sel->fetch();
+        $_SESSION['date']=$donnees['timestamp'];
         while ($donnees = $sel->fetch())
         {
             //On affiche l'id et le nom du client en cours
