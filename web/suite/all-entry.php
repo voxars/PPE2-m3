@@ -8,6 +8,10 @@
     }  
 
 $log=$_SESSION['login'];
+
+$sel=$pdo->prepare("SELECT id FROM mrbs_users WHERE name=? AND password=?");
+   $sel->execute(array($log,$pass));
+   $donnees = $sel->fetch();
 ?>
 <table class="table">
 <thead>
