@@ -10,7 +10,7 @@
 $log=$_SESSION['login'];
 $idu=$_SESSION['id'];
 $sel=$pdo->prepare("SELECT level FROM mrbs_users WHERE id=?");
-   $sel->execute(array($id));
+   $sel->execute(array($idu));
    $donnees = $sel->fetch();
 ?>
 <table class="table">
