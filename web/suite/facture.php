@@ -1,54 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Facture</title>
-    <link rel="stylesheet" href="style.css" media="all" />
-  </head>
-  <body>
-    <header class="clearfix">
-      
-      <h1>Facture</h1>
-      <div id="company" class="clearfix">
-        <div>Company Name</div>
-        <div>455 Foggy Heights,<br /> AZ 85004, US</div>
-        <div>(602) 519-0450</div>
-        <div><a href="mailto:company@example.com">company@example.com</a></div>
-      </div>
-      <div id="project">
-        <div><span>PROJECT</span> Website development</div>
-        <div><span>CLIENT</span> John Doe</div>
-        <div><span>ADDRESS</span> 796 Silver Harbour, TX 79273, US</div>
-        <div><span>EMAIL</span> <a href="mailto:john@example.com">john@example.com</a></div>
-        <div><span>DATE</span> August 17, 2015</div>
-        <div><span>DUE DATE</span> September 17, 2015</div>
-      </div>
-    </header>
-    <main>
-      <table>
-        <thead>
-          <tr>
-            <th class="service">SERVICE</th>
-            <th class="desc">DESCRIPTION</th>
-            <th>PRICE</th>
-            <th>QTY</th>
-            <th>TOTAL</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="service">Design</td>
-            <td class="desc">Creating a recognizable design solution based on the company's existing visual identity</td>
-            <td class="unit">$40.00</td>
-            <td class="qty">26</td>
-            <td class="total"><?php $id ?></td>
-          </tr>
-          
-        </tbody>
-      </table>
-    </main>
-    <footer>
-      
-    </footer>
-  </body>
-</html> 
+<?php
+
+require('fpdf.php');
+include ("connexion.php");
+session_start();
+   if($_SESSION["autoriser"]!="oui"){
+      header("location:login.php");
+      exit();
+   }   
+
+class pdf extends tFPDF
+{
+    // En-tête
+    function Header()
+    {
+        
+        // Police Arial gras 15
+        $this->SetFont('Arial','B',15);
+        // Décalage à droite
+        $this->Cell(80);
+        // Titre
+        $this->Cell(30,10,'Facture',1,0,'C');
+        // Saut de ligne
+        $this->Ln(20);
+    }
+
+    function body()
+    {
+        
+    }
+        
+    
+
+    // Pied de page
+    function Footer()
+    {
+        // Positionnement à 1,5 cm du bas
+        $this->SetY(-15);
+        // Police Arial italique 8
+        $this->SetFont('Arial','I',8);
+        // Numéro de page
+        $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
+    }
+}
+$id=$_SESSION['idr'];
+//var_dump($id);
+$sql =$pdo->prepare("SELECT from_unixtime(start_time) as debut,from_unixtime(end_time) as  fin,timestampdiff(SECOND,from_unixtime(start_time),from_unixtime(end_time))/3600 as duree, price, create_by,room_name, email FROM mrbs_entry e INNER JOIN mrbs_room r on r.id=e.room_id INNER JOIN mrbs_users u on e.create_by=u.name where e.id =?;");
+  $info = $sql->execute(array($id));
+  
+
+/* var_dump($info);
+var_dump($ligne); */
+// Instanciation de la classe dérivée
+$pdf = new pdf();
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Times','',12);
+$pdf->Cell(0,10,'Membre : '.$info['create_by']);
+$pdf->Cell(0,10,'Mail : '.$info['email']);
+$pdf->Cell(0,10,'Date : '.$info['debut']);
+$pdf->Cell(0,10,'Duree : '.$info['duree']);
+$pdf->Cell(0,10,'Prix total : '.$info['price']*$info['duree']); 
+$pdf->Output();
+
+ // observations
+ $pdf->SetFont( "Arial", "BU", 10 ); $pdf->SetXY( 5, 75 ) ; $pdf->Cell($pdf->GetStringWidth("Observations"), 0, "Observations", 0, "L");
+ $pdf->SetFont( "Arial", "", 10 ); $pdf->SetXY( 5, 78 ) ; $pdf->MultiCell(190, 4, $row[5], 0, "L");
+?>
+<form action="session.php" method="POST">
+   <input type="submit" name="bouton" class="btn btn-primary" value="Retour acceuil">
+</form></br>
+<body onLoad="document.fo.login.focus()">
+      [ <a href="deconnexion.php">Se déconnecter</a> ]
+</body>
