@@ -21,13 +21,8 @@ include 'top.php';
 
 
 <body onLoad="document.fo.login.focus()">
-<<<<<<< HEAD
-   <form name="fo" method="post" action="">
-   <div class="form-group px-md-5 ">
-=======
    <form name="fo" method="post" action="session.php">
    <div class="form-group">
->>>>>>> ecb6ff691ccca61429b9d72983d7cfa0b4ab32a4
       <label for="exampleInputEmail1">Pseudo</label>
       <input type="text" class="form-control" name="login" id="pseudo" >
    </div>
