@@ -9,13 +9,16 @@
 
 $log=$_SESSION['login'];
 ?>
-<table>
+<table class="table">
+<thead>
 <tr>
- <th> id </th>
- <th> utilisateur </th>
- <th> description </th>
- <th> date </th>
+ <th scope="col"> id </th>
+ <th scope="col"> utilisateur </th>
+ <th scope="col"> description </th>
+ <th scope="col"> date </th>
   </tr>
+  </thead>
+  <tbody>
   <?php
     $sel=$pdo->prepare("SELECT * FROM mrbs_entry WHERE create_by=?");
     $sel->execute(array($log));
@@ -24,7 +27,7 @@ $log=$_SESSION['login'];
     {
         //On affiche l'id et le nom du client en cours
         echo "</TR>";
-        echo "<TH> ". $donnees['id'] ."</TH>";
+        echo "<TH scope='row'> ". $donnees['id'] ."</TH>";
         echo "<TH> ". $donnees['create_by'] ."</TH>";
         echo "<TH> ". $donnees['description'] ."</TH>";
         echo "<TH>". $donnees['timestamp'] ."</TH>";
@@ -32,6 +35,7 @@ $log=$_SESSION['login'];
     }
     
 ?>
+</tbody>
 </table>
 <form action="session.php" method="POST">
    <input type="submit" name="bouton" class="btn btn-primary" value="Retour acceuil">
