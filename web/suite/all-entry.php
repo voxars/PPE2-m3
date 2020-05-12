@@ -8,9 +8,9 @@
     }  
 
 $log=$_SESSION['login'];
-
-$sel=$pdo->prepare("SELECT id FROM mrbs_users WHERE name=? AND password=?");
-   $sel->execute(array($log,$pass));
+$idu=$_SESSION['id'];
+$sel=$pdo->prepare("SELECT level FROM mrbs_users WHERE id=?");
+   $sel->execute(array($id));
    $donnees = $sel->fetch();
 ?>
 <table class="table">
