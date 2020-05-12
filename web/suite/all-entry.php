@@ -65,7 +65,6 @@ else
     <?php
         $sel=$pdo->prepare("SELECT * FROM mrbs_entry");
         $sel->execute(array($log));
-
         while ($donnees = $sel->fetch())
         {
             //On affiche l'id et le nom du client en cours
@@ -77,7 +76,6 @@ else
             echo "<TH>" ?><input type="submit" name="bouton" onclick=window.location.href='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <?php "/TH>";
             echo "</TR>";
         }
-        
     ?>
     </tbody>
     </table>
