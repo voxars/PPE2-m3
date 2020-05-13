@@ -6,15 +6,14 @@
        header("location:login.php");
        exit();
     }  
-    
-
 $log=$_SESSION['login'];
-$idu=$_SESSION['id'];
+$idu=$_SESSION['id'];   
 $sel=$pdo->prepare("SELECT level FROM mrbs_users WHERE id=?");
    $sel->execute(array($idu));
    $donnees = $sel->fetch();
    $level = $donnees['level'];
    
+
 if($level <= 1)
 {
     ?>
@@ -40,7 +39,7 @@ if($level <= 1)
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
             echo "<TH>". $donnees['timestamp'] ."</TH>";
-            echo "<TH>" ?><input type="submit" name="bouton" onclick=window.location.href='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <form method=POST action='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'><input type="hidden" name="idr" value="<?php echo "".$donnees['id']."" ?>"></input></form><?php "/TH>";
+            echo "<TH>" ?><form method=POST action='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'><input type="submit" name="bouton" onclick=window.location.href='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <input type="hidden" name="idr" value="<?php echo "".$donnees['id']."" ?>"></input></form><?php "/TH>";
             echo "</TR>";
         }
     ?>
@@ -75,8 +74,8 @@ else
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
             echo "<TH>". $donnees['timestamp'] ."</TH>";
-            echo "<TH>" ?><input type="submit" name="bouton" onclick=window.location.href='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <form method=POST action='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'><input type="hidden" name="idr" value="<?php echo "".$donnees['id']."" ?>"></input></form> <?php "/TH>";
-            echo "<TH>" ?><input type="submit" name="bouton" onclick=window.location.href='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/delete.php'; class="btn btn-primary" value="Cloturer facture"> <?php "/<TH>";
+            echo "<TH>" ?><form method=POST action='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'><input type="submit" name="bouton" onclick=window.location.href='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <input type="hidden" name="idr" value="<?php echo "".$donnees['id']."" ?>"></input></form> <?php "/TH>";
+            echo "<TH>" ?><form method=POST action='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/delete.php'><input type="submit" name="bouton" onclick=window.location.href='http://localhost/M2L-SysResSalles/PPE2-m3/web/suite/delete.php'; class="btn btn-primary" value="Cloturer facture"></form> <?php "/<TH>";
             echo "</TR>";
         }
     ?>
