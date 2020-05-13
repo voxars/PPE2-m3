@@ -17,13 +17,13 @@
    
 ?>
 <form action="all-entry.php" method="POST">
-   <input type="submit" name="bouton" class="btn btn-primary" value="Toutes les factures">
+<center><input type="submit" name="bouton" class="btn btn-primary" value="Cliquez ici pour visualiser l'ensemble des factures"></center>
 </form></br>
 
 
 
    <body onLoad="document.fo.login.focus()">
-      [ <a href="deconnexion.php">Se déconnecter</a> ]
+      [ <a href="deconnexion.php">Déconnexion</a> ]
    </body>
 
 </html>

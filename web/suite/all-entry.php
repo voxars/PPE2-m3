@@ -88,5 +88,5 @@ else
    <input type="submit" name="bouton" class="btn btn-primary" value="Retour acceuil">
 </form></br>
 <body onLoad="document.fo.login.focus()">
-      [ <a href="deconnexion.php">Se déconnecter</a> ]
+      [ <a href="deconnexion.php">Déconnexion</a> ]
 </body>
