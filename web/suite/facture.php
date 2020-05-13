@@ -65,7 +65,7 @@ $pdf->Cell(40,10,'Date : '.$info['debut']);
 $pdf->Ln(15);
 $pdf->Cell(40,10,'Duree : '.$info['duree'] .'h');
 $pdf->Ln(15);
-$pdf->Cell(40,10,'Prix total : '.$info['price']*$info['duree']);
+$pdf->Cell(40,10,'Prix total : '.$info['price']*$info['duree'].' euros');
 $pdf->Output();
 /*$pdf->Cell(0,10,'Membre : '.$info['create_by']);
 $pdf->Cell(0,10,'Mail : '.$info['email']);
