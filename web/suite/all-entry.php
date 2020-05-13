@@ -50,6 +50,7 @@ if($level <= 1)
     </table>
     <?php
 }
+
 else
 {
     ?>
