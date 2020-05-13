@@ -15,6 +15,3 @@ echo "Facture Clôturée";*/
 <form action="session.php" method="POST">
    <input type="submit" name="bouton" class="btn btn-primary" value="Retour acceuil">
 </form></br>
-<body onLoad="document.fo.login.focus()">
-      [ <a href="deconnexion.php">Se déconnecter</a> ]
-</body>
