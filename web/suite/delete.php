@@ -1,5 +1,6 @@
 <?php
-$id=$_POST['idr'];
+include ("connexion.php");
+$id = $_POST["idr"];
 echo $id;
 /*$sel=$pdo->prepare("DELETE FROM mrbs_entry WHERE id=?");
 $sel->execute(array($donnees['id']));
