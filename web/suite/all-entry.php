@@ -60,7 +60,7 @@ else
     <th scope="col"> description </th>
     <th scope="col"> date </th>
     <th scope="col"> PDF </th>
-    <th scope="col"> Supprimer </th>
+    <th scope="col"> Cloturer </th>
     </tr>
     </thead>
     <tbody>
