@@ -26,7 +26,7 @@ if($level <= 1)
     <th scope="col"> description </th>
     <th scope="col"> date </th>
     <th scope="col"> PDF </th>
-    <th scope="col"> upprimer </th>
+    <th scope="col"> Supprimer </th>
     </tr>
     </thead>
     <tbody>
@@ -61,6 +61,8 @@ else
     <th scope="col"> utilisateur </th>
     <th scope="col"> description </th>
     <th scope="col"> date </th>
+    <th scope="col"> PDF </th>
+    <th scope="col"> Supprimer </th>
     </tr>
     </thead>
     <tbody>
