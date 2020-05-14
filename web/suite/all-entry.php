@@ -39,7 +39,7 @@ if($level <= 1)
             echo "<TH> ". $donnees['create_by'] ."</TH>";
             echo "<TH> ". $donnees['description'] ."</TH>";
             echo "<TH>". $donnees['timestamp'] ."</TH>";
-            echo "<TH>" ?><form method=POST action='http://localhost/PPE2-m3/web/suite/facture.php'><input type="submit" name="bouton" onclick=window.location.href='http://localhost/PPE2-m3/web/suite/facture.php'; class="btn btn-primary" value="Afficher facture"> <input type="hidden" name="idr" value="<?php echo "".$donnees['id']."" ?>"></input></form><?php "/TH>";
+            echo "<TH>" ?><form method=POST action='facture.php'><input type="submit" name="bouton"; class="btn btn-primary" value="Afficher facture"> <input type="hidden" name="idr" value="<?php echo "".$donnees['id']."" ?>"></input></form><?php "/TH>";
             echo "</TR>";
         }
     ?>
